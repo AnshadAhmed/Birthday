@@ -75,7 +75,7 @@ export default function Celebration({ onNext }) {
                         filter: "drop-shadow(0 0 30px rgba(255,105,180,0.5))",
                     }}
                 >
-                    Time to Celebrate!
+                    Silver Jubilee 🎉
                 </motion.h1>
 
                 <motion.p
@@ -84,7 +84,7 @@ export default function Celebration({ onNext }) {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.8 }}
                 >
-                    The countdown is over... Let's celebrate! 🎉
+                    The countdown is over... 🎉
                 </motion.p>
             </motion.div>
 

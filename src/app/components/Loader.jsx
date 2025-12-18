@@ -27,7 +27,7 @@ export default function Loader() {
                     animate={{ opacity: [0.7, 1, 0.7] }}
                     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 >
-                    Preparing Something Special
+                    Something Special
                 </motion.h1>
 
                 <motion.p
@@ -35,7 +35,7 @@ export default function Loader() {
                     animate={{ opacity: [0.5, 1, 0.5] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                 >
-                    For someone very special...
+                    For you...
                 </motion.p>
             </div>
         </motion.div>

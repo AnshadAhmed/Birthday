@@ -232,7 +232,7 @@ export default function HappyBirthday({ onNext }) {
                         textShadow: "0 0 10px rgba(0,0,0,0.8)",
                     }}
                 >
-                    Having you is one of the biggest blessings of my life.Cheers to more laughs, more adventures, and more you.
+                    Having you is one of the biggest blessings of my life. Cheers to more laughs, more adventures, and more you.
                     May this year bring you endless happiness, success, good health, and everything your heart has been wishing for.
                 </motion.div>
             </motion.div>
@@ -248,7 +248,7 @@ export default function HappyBirthday({ onNext }) {
                     className="bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 hover:from-pink-500 hover:via-purple-500 hover:to-indigo-500 text-white text-xl px-8 py-4 rounded-full shadow-xl border-2 border-white/70 transition-all duration-300 hover:scale-[103%]"
                 >
                     <motion.div className="flex items-center space-x-2" whileHover={{ x: 5 }}>
-                        <span>See Our Moments</span>
+                        <span>See Moments</span>
                         <ArrowRight className="w-6 h-6" />
                     </motion.div>
                 </button>

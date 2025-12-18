@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react"
 import { Camera, ArrowRight } from "lucide-react"
+import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCube, Pagination } from 'swiper/modules'
 import 'swiper/css'
@@ -13,8 +14,22 @@ export default function PhotoGallery({ onNext }) {
     const photos = [
         { id: 1, src: "/images/1.jpg" },
         { id: 2, src: "/images/2.jpg" },
-    ]
+        { id: 3, src: "/images/3.jpg" },
+        { id: 4, src: "/images/4.jpg" },
+        { id: 5, src: "/images/5.jpg" },
+        { id: 6, src: "/images/6.jpg" },
+        { id: 7, src: "/images/7.jpg" },
+        { id: 8, src: "/images/8.jpg" },
+        { id: 9, src: "/images/9.jpg" },
+        { id: 10, src: "/images/10.jpg" },
+        { id: 11, src: "/images/11.jpg" },
+        { id: 12, src: "/images/12.jpg" },
+        { id: 13, src: "/images/13.jpg" },
+        { id: 14, src: "/images/14.jpg" },
 
+
+    ]
+    
     return (
         <motion.div
             className="min-h-screen flex flex-col items-center justify-center p-8 relative overflow-hidden"
@@ -43,7 +58,9 @@ export default function PhotoGallery({ onNext }) {
                 <h1 className="text-4xl md:text-6xl py-1 md:py-2 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 mb-6">
                 Moments with You 
                 </h1>
-                <p className="text-xl text-purple-300">Beautiful moments with Madam Jii 📸</p>
+                <p className="text-xl text-purple-300">Beautiful moments 📸<br />
+                    swipe through the memories and scroll down for a surprise!
+                </p>
             </motion.div>
 
             {/* Cube Gallery */}
@@ -63,11 +80,15 @@ export default function PhotoGallery({ onNext }) {
                 >
                     {photos.map((photo, index) => (
                         <SwiperSlide key={photo.id}>
-                            <img
-                                src={photo.src || "/placeholder.svg"}
-                                alt={`Memory ${index + 1}`}
-                                className="w-full h-full object-cover rounded-xl"
-                            />
+                            <div className="w-full h-full relative rounded-xl overflow-hidden">
+                                <Image
+                                    src={photo.src || "/placeholder.svg"}
+                                    alt={`Memory ${index + 1}`}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 450px"
+                                    className="object-cover"
+                                />
+                            </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>

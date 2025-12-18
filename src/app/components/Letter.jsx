@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "motion/react"
 import { Mail, Heart, Sparkles, RotateCcw } from "lucide-react"
 import confetti from "canvas-confetti"
@@ -10,19 +10,40 @@ export default function Letter() {
     const [showText, setShowText] = useState(false)
     const [currentText, setCurrentText] = useState("")
     const [showCursor, setShowCursor] = useState(true)
+    const scrollRef = useRef(null)
 
-    const letterText = `My Dearest Madam Jii,
+    const letterText = `My Dearest Anuuu 💖
 
-On this very special day, I want you to know how incredibly grateful I am to have you in my life. Your birthday isn't just a celebration of another year - it's a celebration of all the joy, laughter, and beautiful memories you bring to this world.
+Happy Birthday to my favourite, My best friend, My sister. 
 
-You have this amazing ability to light up any room you enter, to make people smile even on their darkest days, and to spread kindness wherever you go. Your heart is pure gold, and your spirit is absolutely infectious.
+I still don’t understand how you randomly spawned into my life and somehow became someone so important to me. You’re that one person you haven’t known for too long, yet you can share everything with — without fear, without judgment. You give both best-friend and sister vibes, and I wouldn’t trade that for anything.
 
-Thank you for being the wonderful, amazing, absolutely fantastic person that you are. The world is so much brighter because you're in it.
+I don’t even know how to thank you, because I’m not used to people caring for me the way you do. But I know this much — I am incredibly lucky to have you in my life. Good friends are rare, and the bond we share is something truly impossible to forget.
 
-Happy Birthday, beautiful soul! 🎂✨
+No matter how much time passes, or whether we talk every day or not, the place I’ve given you in my heart will always remain the same. You are my favourite person in this world — the one I can have deep conversations with and still laugh about the dumbest, most random things.
 
-With all my love and warmest wishes,
-Forever Yours 💕`
+It makes me genuinely happy when you share the little things with me — the random updates, the silly moments, the everyday stuff. It’s the little things that make this bond feel so special. Every moment with you somehow becomes my new favourite memory.
+
+As a friend, I am never tired of your life — your stories, your thoughts, or your struggles. I hate it when people say, “I don’t want to bother you with the same issue again.” If something weighs on your chest every day, spill it. Call me. Text me. Anytime. Any day. I’m here.
+Promise me one thing — never hide yourself when you’re in pain. It’s unfair that we laughed together but you cried alone.
+
+From the bottom of my heart, I want you to know this — I could never love another soul the way I love you. No one can ever change how I feel about you, not even you.
+
+Maybe I never showed you how much your presence mattered to me, but I swear all I ever wished for was to have you by my side. Sometimes I tease you, irritate you, or roast you — and sometimes I fight, argue, or say things I don’t mean, because you’re close to me. If I ever hurt you unintentionally, I’m truly sorry. I roast you, but I never want to hurt you.
+
+You’re different from everyone else. You have a special place in my heart. I know my sister knows how much I love her, but I love her more than she’ll ever know.
+
+I never expect anything in return from you. All I need is your friendship — just like we’ve always had. Please never thank me — I’d do everything a thousand times over. If not for you, then who else would I do it for?
+
+I may not always know the right words or how to comfort you perfectly, but I promise you this — I will always be here to listen, to understand, and to share whatever you’re going through.
+
+If I could give you one thing in life, I would give you the ability to see yourself through my eyes. Only then would you realise how special you truly are to me.
+
+You have no idea how important you are to me… and honestly, I don’t even know how to explain it properly.
+
+Thank you for being part of my life.
+Happy Birthday, Anuuu 💖🎂
+Always yours — in friendship, in love, and in loyalty.`
 
     useEffect(() => {
         if (showText) {
@@ -47,6 +68,15 @@ Forever Yours 💕`
             return () => clearInterval(timer)
         }
     }, [showText, letterText])
+
+    // Auto-scroll to bottom while the letter is being typed
+    useEffect(() => {
+        const el = scrollRef.current
+        if (el) {
+            // scroll to bottom smoothly so newly typed lines are visible
+            el.scrollTo({ top: el.scrollHeight, behavior: 'smooth' })
+        }
+    }, [currentText])
 
     const handleOpenLetter = () => {
         setIsOpen(true)
@@ -149,7 +179,7 @@ Forever Yours 💕`
                                     </motion.div>
                                 </div>
 
-                                <div className="min-h-72 max-h-72 overflow-y-auto text-gray-700 leading-relaxed">
+                                <div ref={scrollRef} className="min-h-72 max-h-72 overflow-y-auto text-gray-700 leading-relaxed">
                                     {showText && (
                                         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mb-3 mr-2 ">
                                             <div className="whitespace-pre-wrap font-cute">
