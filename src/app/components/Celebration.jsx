@@ -104,7 +104,7 @@ export default function Celebration({ onNext }) {
                 >
                     <motion.div className="flex items-center space-x-2" whileTap={{ scale: 0.95 }}>
                         <Gift className="w-5 h-5" />
-                        <span className="font-semibold">Let's Celebrate!</span>
+                        <span className="font-semibold">My Gift For You 😊</span>
                         <Sparkles className="w-5 h-5" />
                     </motion.div>
                 </button>

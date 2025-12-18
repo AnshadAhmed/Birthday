@@ -220,7 +220,7 @@ export default function HappyBirthday({ onNext }) {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.3 }}
                 >
-                    Madam Jii<span className="text-white">💕</span>
+                    Anuu<span className="text-white">💕</span>
                 </motion.h2>
 
                 <motion.div
@@ -232,7 +232,8 @@ export default function HappyBirthday({ onNext }) {
                         textShadow: "0 0 10px rgba(0,0,0,0.8)",
                     }}
                 >
-                    🎉 It's your special day! 🎉
+                    Having you is one of the biggest blessings of my life.Cheers to more laughs, more adventures, and more you.
+                    May this year bring you endless happiness, success, good health, and everything your heart has been wishing for.
                 </motion.div>
             </motion.div>
 
