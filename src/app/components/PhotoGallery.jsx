@@ -2,7 +2,6 @@
 
 import { motion } from "motion/react"
 import { Camera, ArrowRight } from "lucide-react"
-import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCube, Pagination } from 'swiper/modules'
 import 'swiper/css'
@@ -81,12 +80,10 @@ export default function PhotoGallery({ onNext }) {
                     {photos.map((photo, index) => (
                         <SwiperSlide key={photo.id}>
                             <div className="w-full h-full relative rounded-xl overflow-hidden">
-                                <Image
+                                <img
                                     src={photo.src || "/placeholder.svg"}
                                     alt={`Memory ${index + 1}`}
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, 450px"
-                                    className="object-cover"
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
                         </SwiperSlide>
