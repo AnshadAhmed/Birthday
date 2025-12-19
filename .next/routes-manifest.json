@@ -2,8 +2,16 @@
   "version": 3,
   "pages404": true,
   "caseSensitive": false,
-  "basePath": "",
+  "basePath": "/Birthday",
   "redirects": [
+    {
+      "source": "/Birthday",
+      "destination": "/Birthday/",
+      "basePath": false,
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^/Birthday$"
+    },
     {
       "source": "/:file((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+)/",
       "destination": "/:file",
