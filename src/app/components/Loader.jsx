@@ -7,7 +7,7 @@ export default function Loader() {
     return (
         <motion.div
             className="flex items-center justify-center min-h-screen relative overflow-hidden"
-            initial={{ opacity: 0, scale: 0 }}
+            initial={{ opacity: 1, scale: 1 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
         >
