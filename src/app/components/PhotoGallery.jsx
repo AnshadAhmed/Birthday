@@ -4,6 +4,7 @@ import { motion } from "motion/react"
 import { Camera, ArrowRight } from "lucide-react"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCube, Pagination } from 'swiper/modules'
+import { getAssetPath } from '@/lib/assetPath'
 import 'swiper/css'
 import 'swiper/css/effect-cube'
 import 'swiper/css/pagination'
@@ -11,20 +12,20 @@ import 'swiper/css/pagination'
 export default function PhotoGallery({ onNext }) {
 
     const photos = [
-        { id: 1, src: "/Birthday/images/1.jpg" },
-        { id: 2, src: "/Birthday/images/2.jpg" },
-        { id: 3, src: "/Birthday/images/3.jpg" },
-        { id: 4, src: "/Birthday/images/4.jpg" },
-        { id: 5, src: "/Birthday/images/5.jpg" },
-        { id: 6, src: "/Birthday/images/6.jpg" },
-        { id: 7, src: "/Birthday/images/7.jpg" },
-        { id: 8, src: "/Birthday/images/8.jpg" },
-        { id: 9, src: "/Birthday/images/9.jpg" },
-        { id: 10, src: "/Birthday/images/10.jpg" },
-        { id: 11, src: "/Birthday/images/11.jpg" },
-        { id: 12, src: "/Birthday/images/12.jpg" },
-        { id: 13, src: "/Birthday/images/13.jpg" },
-        { id: 14, src: "/Birthday/images/14.jpg" },
+        { id: 1, src: getAssetPath("/images/1.jpg") },
+        { id: 2, src: getAssetPath("/images/2.jpg") },
+        { id: 3, src: getAssetPath("/images/3.jpg") },
+        { id: 4, src: getAssetPath("/images/4.jpg") },
+        { id: 5, src: getAssetPath("/images/5.jpg") },
+        { id: 6, src: getAssetPath("/images/6.jpg") },
+        { id: 7, src: getAssetPath("/images/7.jpg") },
+        { id: 8, src: getAssetPath("/images/8.jpg") },
+        { id: 9, src: getAssetPath("/images/9.jpg") },
+        { id: 10, src: getAssetPath("/images/10.jpg") },
+        { id: 11, src: getAssetPath("/images/11.jpg") },
+        { id: 12, src: getAssetPath("/images/12.jpg") },
+        { id: 13, src: getAssetPath("/images/13.jpg") },
+        { id: 14, src: getAssetPath("/images/14.jpg") },
 
 
     ]
